@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>The Tooltip - documentation</title>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style>
+@charset "utf-8";body{margin:0 0 0 50px;font-family:Helvetica,sans-serif;font-size:15px;color:#2d2d2d;background:#036;background:-moz-linear-gradient(top,#036,#00233f);background:-webkit-gradient(linear,left top,left bottom,from(#036),to(#00233f));counter-reset:section}a:link,a:visited{color:#0077be}p{margin:10px 0 10px 0;line-height:1.6}pre{margin:10px 30px 10px 0;padding:10px;font-family:"Courier New",Courier,monospace;color:#000;line-height:1.5;background-color:#ffe5b4;border:#b29e7f solid 1px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;white-space:pre-wrap;white-space:-moz-pre-wrap!important;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}mark{padding:2px 7px 3px 7px;color:#2d2d2d;background-color:#ededed;border:#c0c0c0 solid 1px}ul{margin:10px 0 20px 35px;padding:0;line-height:1.6;list-style:disc outside}ul li{margin:0 0 5px 0}ol{margin:25px 0 20px 35px;padding:0;line-height:1.6;list-style:decimal outside}ol li{margin:0 0 15px 0}table{margin:20px 0 20px 0;border:#c0c0c0 solid 3px;border-collapse:collapse}table caption{padding:10px;font-size:18px;text-align:center;border:#474747 solid 1px}table thead,table tfoot{font-weight:bold;background:#dedede;background:-moz-linear-gradient(top,#ededed,#dedede);background:-webkit-gradient(linear,left top,left bottom,from(#ededed),to(#dedede));border:#c0c0c0 solid 3px}table tr td{padding:10px;line-height:1.6;border:#c0c0c0 solid 1px;vertical-align:top}table tr:nth-child(even) td{background-color:#ededed}#wrapper{width:960px;margin:50px auto 50px auto;background-color:#fff;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;-moz-box-shadow:0 1px 7px rgba(0,0,0,0.7);-webkit-box-shadow:0 1px 7px rgba(0,0,0,0.7);box-shadow:0 1px 7px rgba(0,0,0,0.7)}header{margin:0 0 50px 0;padding:20px;display:block}header a:link,header a:visited{color:#fff}header hgroup{position:relative;margin:10px 0 30px 0;display:block;overflow:auto}header hgroup h1{margin:0;font-size:50px;float:left}header hgroup h1 embed{width:20px;height:20px;margin:10px 0 0 5px;vertical-align:top}header hgroup h2{margin:10px 0 0 0;padding:10px 15px 10px 15px;font-size:17px;color:#fff;background-color:#f28500;-moz-border-radius:50px;-webkit-border-radius:50px;border-radius:50px;display:inline-block;float:right}#info{width:100%;margin:0 0 0 -20px;padding:20px;color:#fff;line-height:1.4;background:#2d2d2d;background:-moz-linear-gradient(top,#474747,#1c1c1c);background:-webkit-gradient(linear,left top,left bottom,from(#474747),to(#1c1c1c));overflow:auto}#metadata,#reference{margin:0;padding:15px;font-size:17px;background-color:#1c1c1c;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;-moz-box-shadow:0 1px 1px rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.7) inset;-webkit-box-shadow:0 1px 1px rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.7) inset;box-shadow:0 1px 1px rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.7) inset}#metadata{width:330px;margin:0;line-height:1.6;display:inline-block;float:left;clear:none}#metadata dt{width:110px;font-weight:bold;float:left;clear:left}#metadata dd{margin:0;float:left;clear:right}#reference{width:510px;float:right}section{position:relative;margin:0 0 100px 0;padding:0 20px 30px 20px;border-bottom:#dedede solid 1px;display:block}section h1{min-height:33px;position:relative;margin:0 -20px 30px -20px;padding:10px 100px 7px 20px;font-family:Georgia,serif;font-size:25px;text-shadow:0 1px 0 rgba(255,255,255,0.7);line-height:1.3;letter-spacing:1px;word-spacing:3px;background:#dedede;background:-moz-linear-gradient(top,#ededed,#c0c0c0);background:-webkit-gradient(linear,left top,left bottom,from(#ededed),to(#c0c0c0));-moz-box-shadow:0 1px 2px rgba(0,0,0,0.7);-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.7);box-shadow:0 1px 2px rgba(0,0,0,0.7);counter-increment:section}section h1:before{width:50px;height:39px;position:absolute;left:-50px;top:0;padding:11px 0 0 0;color:#fff;font-family:Helvetica,sans-serif;text-align:center;text-shadow:0 1px 0 rgba(0,0,0,1);background:#2d2d2d;background:-moz-linear-gradient(top,#1c1c1c,#474747);background:-webkit-gradient(linear,left top,left bottom,from(#1c1c1c),to(#474747));-moz-border-radius:7px;-webkit-border-radius:7px;border-radius:7px;-moz-border-radius-topright:0;-moz-border-radius-bottomright:0;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;z-index:9;content:counter(section,upper-alpha)}section h1:after{width:55px;height:60px;position:absolute;left:-55px;top:-5px;background:#1c1c1c;background:-moz-linear-gradient(top,#474747,#1c1c1c);background:-webkit-gradient(linear,left top,left bottom,from(#474747),to(#1c1c1c));-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;-moz-border-radius-topright:0;-moz-border-radius-bottomright:0;-webkit-border-top-right-radius:0;-webkit-border-bottom-right-radius:0;border-top-right-radius:0;border-bottom-right-radius:0;z-index:0;content:""}section h2{margin:30px 0 15px 0;font-size:20px}section h2+*{margin-top:0}section#toc h1{counter-increment:none}section#toc h1:before{content:"●"}section#toc ol{font-size:20px;list-style:upper-alpha}section#toc ol li+li{margin:10px 0 0 0}section#toc ol li a{padding:0 0 3px 0;color:#2d2d2d;text-decoration:none;border-bottom:#c0c0c0 dotted 1px}section nav{width:55px;position:absolute;right:15px;top:15px;overflow:auto;display:block}section nav a:link,section nav a:visited{margin:0;padding:0;color:#2d2d2d;font-family:Verdana,sans-serif;font-size:17px;text-decoration:none}section nav a.prev{float:left}section nav a.next{float:right}section *:last-child{margin-bottom:0}footer{padding:20px;background-color:#ededed;border-top:#c0c0c0 solid 1px;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;-moz-border-radius-topleft:0;-moz-border-radius-topright:0;-webkit-border-top-left-radius:0;-webkit-border-top-right-radius:0;border-top-left-radius:0;border-top-right-radius:0;overflow:auto;display:block}footer p{margin:0;float:left}footer a{float:right}@media only screen and (device-width:768px){section nav{width:75px}}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+<script>
+document.observe("dom:loaded",function(){var f=RegExp("^("+["a","abbr","acronym","address","area","article","aside","audio","b","base","bdi","bdo","blockquote","body","br","br","button","canvas","caption","cite","code","col","colgroup","command","datalist","dd","del","details","device","dfn","div","dl","dt","em","embed","fieldset","figcaption","figure","footer","form","h1","h2","h2","h4","h5","h6","head","header","header","hgroup","hr","html","i","iframe","img","input","ins","kbd","keygen","label", "li","link","map","mark","menu","meta","meter","nav","noscript","ol","optgroup","option","output","p","param","pre","progress","q","rp","rt","ruby","s","samp","script","section","select","source","span","strong","style","sub","summary","sup","svg","table","tbody","td","textarea","tfoot","th","thead","time","title","tr","track","ul","var","video","wbr"].toString().replace(/,/g,"|")+")$","g");$$("mark").each(function(a){a.innerHTML.match(f)&&a.update((new Element("a",{href:"http://www.w3schools.com/html5/tag_"+ a.innerHTML+".asp"})).update(a.innerHTML))});var d=new Element("ol");$$("section").each(function(a){var c=a.down("h1");if(c!==undefined){if(a.readAttribute("id")!=="toc"){var b=(new Element("a",{href:"#"+a.readAttribute("id")})).update(c.innerHTML);b=(new Element("li")).update(b);d.insert({bottom:b})}b=new Element("nav");var e=a.previous("section");a=a.next("section");e!==undefined&&b.insert((new Element("a",{"class":"prev",href:"#"+e.identify()})).update("&uarr;&uarr;"));a!==undefined&&b.insert((new Element("a", {"class":"next",href:"#"+a.identify()})).update("&darr;&darr;"));c.insert({after:b})}});$$("section#toc")[0].insert(d)});
+</script>
+</head>
+<body>
+<div id="wrapper">
+
+
+<header>
+
+<hgroup>
+<h1>The Tooltip</h1>
+<h2>Documentation</h2>
+</hgroup>
+
+<div id="info">
+
+<dl id="metadata">
+<dt>version</dt><dd>2.0</dd>
+<dt>author</dt><dd>DADU</dd>
+<dt>email</dt><dd><a href="mailto:support@dadu.be">support@dadu.be</a></dd>
+<dt>website</dt><dd><a href="http://horizontalhero.dadu.be/">thetooltip.dadu.be</a></dd>
+</dl>
+
+<p id="reference">Thank you for purchasing <b>The Tooltip</b>.<br />If you have any questions that are beyond the scope of this documentation, please feel free to email via the DADU<br /><a href="http://codecanyon.net/user/DADU/">user page contact form</a>.</p>
+
+</div>
+</header>
+
+
+
+<section id="toc">
+
+<h1>Table of contents</h1>
+
+
+<noscript>Enable JavaScript to show the table of contents.</noscript>
+
+</section>
+
+
+
+<section id="getting_started">
+
+<h1>Getting started</h1>
+
+
+<ol>
+    <li>Unzip your downloaded <mark>thetooltip.zip</mark> file.</li>
+    <li>Follow the steps for integration in a <a href="#html_website"><abbr>HTML</abbr> website</a> or a <a href="#wordpress_website">Wordpress website</a>.</li>
+</ol>
+
+</section>
+
+
+
+<section id="html_website">
+
+<h1>Integration in a HTML website</h1>
+
+
+<h2>Linking the <abbr>CSS</abbr> file</h2>
+
+<ol>
+	<li>Place <mark>thetooltip.css</mark> in the directory of your website or project.</li>
+	<li>Open your <abbr>HTML</abbr> document.</li>
+    <li>
+    <p>Copy the following code:</p>
+<pre>
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;thetooltip.css&quot; /&gt;
+</pre>
+    </li>
+    <li>Paste it within the <mark>head</mark> tags of your <abbr>HTML</abbr> document.</li>
+</ol>
+
+<h2>Creating a tooltip</h2>
+
+<ol>
+    <li>
+    <p>Copy the following code:</p>
+<pre>
+&lt;a href=&quot;&quot;&gt;anchor&lt;span class=&quot;tooltip applegreen&quot;&gt;The Tooltip works!&lt;/span&gt;&lt;/a&gt;
+</pre>
+    </li>
+    <li>Paste it somewhere within the <mark>body</mark> tags of your <abbr>HTML</abbr> document.</li>
+    <li>See the <a href="#classname_overview">classname overview</a> to change the classnames to your desire.</li>
+</ol>
+
+</section>
+
+
+
+<section id="wordpress_website">
+
+<h1>Integration in a Wordpress website</h1>
+
+
+<h2>Linking the <abbr>CSS</abbr> file</h2>
+
+<ol>
+	<li>Locate your Wordpress theme's directory. By default this is located at <mark>wordpress/wp-content/themes/themename/</mark>.</li>
+	<li>Place <mark>thetooltip.css</mark> inside this directory.</li>
+	<li>Open <mark>header.php</mark>.</li>
+	<li>
+	<p>Copy the following code:</p>
+<pre>
+&lt;?php wp_enqueue_style('thetooltip',get_bloginfo('stylesheet_directory') . '/thetooltip.css'); ?&gt;
+</pre>
+	</li>
+	<li>Paste it within the <mark>head</mark> tags of this document.</li>
+</ol>
+
+<h2>Creating a tooltip</h2>
+
+<ol>
+	<li>Login to your Wordpress admin panel.</li>
+	<li>Open the post or page to which you want to add a tooltip.</li>
+	<li>Make sure the <mark><abbr>HTML</abbr></mark> tab (next to the <mark>Visual</mark> tab) is activated in the text editor.</li>
+    <li>
+    <p>Copy the following code:</p>
+<pre>
+&lt;a href=&quot;&quot;&gt;anchor&lt;span class=&quot;tooltip applegreen&quot;&gt;The Tooltip works!&lt;/span&gt;&lt;/a&gt;
+</pre>
+    </li>
+	<li>Paste it in the text editor where you want a tooltip to appear.</li>
+	<li>See the <a href="#classname_overview">classname overview</a> to change the classnames to your desire.</li>
+</ol>
+
+</section>
+
+
+
+<section id="positioning">
+
+<h1>Positioning</h1>
+
+
+<p>The Tooltip can be positioned by adding one of the following classnames to it:</p>
+
+<ul>
+<li>left</li>
+<li>center</li>
+<li>right</li>
+</ul>
+
+<p>By default The Tooltip is positioned left. In this example we are positioning The Tooltip in the center by adding the <mark>center</mark> classname to it:</p>
+
+<pre>
+&lt;a href=&quot;&quot;&gt;anchor&lt;span class=&quot;tooltip center applegreen&quot;&gt;This is a tooltip with center positioning&lt;/span&gt;&lt;/a&gt;
+</pre>
+
+</section>
+
+
+
+<section id="changing_default_width">
+
+<h1>Changing the default width</h1>
+
+
+<p>The Tooltip's default width is <mark>300px</mark>. In this example, we are going to change the width from <mark>300px</mark> to <mark>500px</mark>:</p>
+
+<ol>
+	<li>Open <mark>thetooltip.css</mark>.</li>
+	<li>Locate <mark>.tooltip</mark>.</li>
+	<li>
+	<p>Change</p>
+<pre>
+width:300px;
+</pre>
+	<p>to</p>
+<pre>
+width:500px;
+</pre>
+	</li>
+	<li>To ensure our tooltip centers when we apply the <mark>center</mark> classname, we need to do one additional adjustment.</li>
+	<li>Locate <mark>.tooltip.center</mark>.</li>
+	<li>
+	<p>Change</p>
+<pre>
+margin-left:-165px;
+</pre>
+	<p>to</p>
+<pre>
+margin-left:-265px;
+</pre>
+	<p>This is the formula we use to calculate <mark>margin-left</mark>:</p>
+<pre>
+margin-left = - (width / 2) + padding
+</pre>
+	<p>The Tooltip's <mark>padding</mark> is <mark>15</mark> by default.</p>
+</li>
+<li>Save <mark>thetooltip.css</mark>.</li>
+</ol>
+
+</section>
+
+
+
+<section id="speech_bubble">
+
+<h1>Using The Tooltip as a speech bubble</h2>
+
+<p>By adding the <mark>speechbubble</mark> classname to your tooltip you can create a speech bubble that's visible by default. Example:</p>
+
+<pre>
+&lt;div class=&quot;tooltip speechbubble applegreen&quot;&gt;This speech bubble is visible without a hover&lt;/div&gt;
+</pre>
+
+<p>Note that speech bubbles are not restricted to <mark>div</mark> elements. You could do the same with other elements.</p>
+
+</section>
+
+
+
+<section id="classname_overview">
+
+<h1>Classname overview</h1>
+
+
+<table>
+
+<thead>
+
+<tr>
+<td>classname</td>
+<td>function</td>
+<td>applies to</td>
+<td>example</td>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>tooltip</td>
+<td>Defines a tooltip. Use this in combination with one of the color classes.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>left</td>
+<td>Positions a tooltip to the left, relative to its parent anchor element. This is the default position for a tooltip.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip left&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>center</td>
+<td>Positions a tooltip in the center, relative to its parent anchor element.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip center&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>right</td>
+<td>Positions a tooltip to the right, relative to its parent anchor element.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip right&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>speechbubble</td>
+<td>Shows a tooltip as a speech bubble. A speech bubble is visible by default.</td>
+<td>*</td>
+<td>&lt;div class=&quot;tooltip speechbubble&quot;&gt;&lt;/div&gt;</td>
+</tr>
+
+<tr>
+<td>applegreen</td>
+<td>Applies the apple green color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip applegreen&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>bistre</td>
+<td>Applies the bistre color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip bistre&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>bluegray</td>
+<td>Applies the blue gray color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip bluegray&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>bronze</td>
+<td>Applies the bronze color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip bronze&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>byzantium</td>
+<td>Applies the byzantium color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip byzantium&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>forestgreen</td>
+<td>Applies the forest green color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip forestgreen&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>junglegreen</td>
+<td>Applies the jungle green color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip junglegreen&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>lavendar</td>
+<td>Applies the lavendar color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip lavender&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>linen</td>
+<td>Applies the linen color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip linen&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>melon</td>
+<td>Applies the melon color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip melon&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>midnightblue</td>
+<td>Applies the midnight blue color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip midnightblue&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>mint</td>
+<td>Applies the mint color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip mint&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>mustard</td>
+<td>Applies the mustard color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip mustard&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>olivine</td>
+<td>Applies the olivine color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip olivine&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>pastelred</td>
+<td>Applies the pastel red color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip pastelred&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>rosewood</td>
+<td>Applies the rosewood color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip rosewood&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>sanddune</td>
+<td>Applies the sand dune color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip sanddune&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>silver</td>
+<td>Applies the silver color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip silver&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>sienna</td>
+<td>Applies the sienna color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip sienna&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>skyblue</td>
+<td>Applies the sky blue color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip skyblue&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>slate</td>
+<td>Applies the slate color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip slate&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>sunset</td>
+<td>Applies the sunset color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip sunset&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>tangerine</td>
+<td>Applies the tangerine color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip tangerine&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>turquoise</td>
+<td>Applies the turquoise color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip turquoise&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>tyrian purple</td>
+<td>Applies the tyrian purple color scheme.</td>
+<td>span</td>
+<td>&lt;span class=&quot;tooltip tyrianpurple&quot;&gt;&lt;/span&gt;</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<footer>
+<p id="copyright">&copy; DADU</p>
+<a href="#top">TOP</a>
+</footer>
+
+
+</div>
+</body>
+</html>
