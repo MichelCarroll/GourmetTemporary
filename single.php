@@ -17,8 +17,18 @@ get_header(); ?>
               <div id="article">
 
                   <?php the_post(); ?>
-                  
-                  <h1><?php the_title(); ?></h1>
+                  <?php $catDet = get_the_category($post->ID);
+	$color_values = "#8ec75e";
+	$mainCatSlug = get_post_meta($post->ID,'post_main_category', TRUE);
+	if(!empty($mainCatSlug))
+	{
+		$mainCat = get_category_by_slug( $mainCatSlug );
+		$mainCatTermId = $mainCat->term_id;
+		$color_name = "category_".$mainCatTermId."_color";
+		$color_values = get_option( "$color_name");
+	}
+	 ?>
+                  <h1 style="color:<?php echo $color_values; ?>"><?php the_title(); ?></h1>
                   <hr class="grayed">
 
                   <?php

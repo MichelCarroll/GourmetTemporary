@@ -517,7 +517,7 @@ function get_current_language_code() {
 function link_to_other_language() {
     global $languages;
     if(!$languages)
-        $languages = icl_get_languages('skip_missing=N&orderby=KEY&order=DIR');
+        $languages = icl_get_languages('skip_missing=0&orderby=KEY&order=DIR');
     
     foreach($languages as $lang) {
         if(!$lang['active']) {
