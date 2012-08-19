@@ -80,24 +80,26 @@ function initialize_map() {
 
 function initialize_icons() {
 
-    initialize_icon("detaillant", "dblue");
-    initialize_icon("detaillant-3", "dblue");
-    initialize_icon("fromage", "blue");
-    initialize_icon("fromage-2", "blue");
-    initialize_icon("abeille", "yellow");
-    initialize_icon("abeille-2", "yellow");
-    initialize_icon("tables", "orange");
-    initialize_icon("tables-2", "orange");
-    initialize_icon("erable", "brown");
-    initialize_icon("erable-2", "brown");
-    initialize_icon("transforme", "green");
-    initialize_icon("transforme-2", "green");
-    initialize_icon("fruits-et-legumes", "lgreen");
-    initialize_icon("fruits-et-legumes-2", "lgreen");
-    initialize_icon("viande", "red");
-    initialize_icon("viande-2", "red");
-    initialize_icon("marche", "pink");
-    initialize_icon("marche-2", "pink");
+    initialize_icon("decouvrez-le-savoir-faire-dici", "purple");
+    initialize_icon("discover-the-know-how-by", "purple");
+    
+    initialize_icon("succombez-a-nos-tables-gourmandes", "red");
+    initialize_icon("indulge-in-our-gourmet-restaurants", "red");
+    
+    initialize_icon("vibrez-au-rythme-de-la-culture", "yellow");
+    initialize_icon("experience-the-thrills-of-culture", "yellow");
+    
+    initialize_icon("admirez-des-paysages-et-des-lieux-uniques", "green");
+    initialize_icon("enjoy-the-scenery-and-unique-places", "green");
+    
+    initialize_icon("partagez-une-agriculture-riche", "blue");
+    initialize_icon("share-a-rich-agriculture", "blue");
+    
+    initialize_icon("profitez-dune-region-qui-bouge", "cyan");
+    initialize_icon("enjoy-an-active-region-in", "cyan");
+    
+    
+    
     initialize_icon("myself", "me", true);
 
 }
