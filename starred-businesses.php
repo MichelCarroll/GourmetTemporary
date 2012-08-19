@@ -49,7 +49,6 @@
           <div class="business">
 
               <?php
-
                     //$img_url = array(get_stylesheet_directory_uri() . '/images/slider-default.jpg',220, 120, false);
 					$img_url = get_stylesheet_directory_uri() . '/images/slider-default.jpg';
 
@@ -68,8 +67,7 @@
 
               <div class="description">
 
-                  <?php $featuredDate = get_the_date();  ?>
-                  <span class="meta-information"><?php echo date("l d M Y", strtotime($featuredDate)); ?> &bull; <?php the_category(', '); ?></span>
+                  <span class="meta-information"><?php echo get_the_date(); ?> &bull; <?php the_category(', '); ?></span>
 
                   <h2><a href="<?php echo return_business_permalink($post->ID); ?>"><?php the_title(); ?></a></h2>
 
@@ -78,9 +76,7 @@
                   <div class="bottom">
 
                       <hr class="dotted" />
-
-                      <a  href="<?php echo return_business_permalink($post->ID); ?>" class="more" >&raquo; <?php echo __('Continuer la lecture'); ?></a>
-
+                      <a  href="<?php echo return_business_permalink($post->ID); ?>" class="more" >&raquo; <?php echo __('Keep Reading'); ?></a>
                   </div>
 
               </div>

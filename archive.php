@@ -13,25 +13,18 @@
  */
 get_header();
 
-        //add_filter('post_limits', 'gourmet_pagination_limits');
-        //add_filter('posts_orderby', 'gourmet_archive_sorting' );
-//business_order();
+        add_filter('post_limits', 'gourmet_pagination_limits');
+        add_filter('posts_orderby', 'gourmet_archive_sorting' );
+
         ?>
         <div id="content" class="directory">
         <?php
-		//echo $query_string;
-		/*$query_string_exp = explode("=", $query_string);
-		$query_string = 'cat='.$query_string_exp[1];
-        $query_string = handle_category_exclude($query_string);*/
-		//print_r($query_string);
-		$paged = 0;
-		if(isset($_GET['page_num']))
-		{
-			$paged = $_GET['page_num'];
-		}
-		$quered = $wp_query->query_vars;
-		query_posts(array ( $wp_query->query, 'paged' =>$paged, 'post_type' => 'business'));
+
+        $query_string = handle_category_exclude($query_string);
+        query_posts($query_string);
         $post_count = gourmet_post_count();
+
+
         if ( have_posts() ) : ?>
 
 
@@ -68,7 +61,6 @@ get_header();
 
                 <?php endwhile; ?>
                 </ul>
-                <?php //wp_pagenavi(); ?>
 
                 <?php
                     $current_page = (isset($_GET['page_num'])?$_GET['page_num']:1);

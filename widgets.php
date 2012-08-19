@@ -135,21 +135,22 @@ class Business_Categories extends WP_Widget {
 			//echo $cat->cat_ID;
 			
 			$color_name = "category_".$cat->cat_ID."_color";
+      $idName = 'category-'.$cat->cat_ID;
 			$category_meta_color = get_option( "$color_name");
 			
             if(!strstr($cat->slug, 'blog') && !strstr($cat->slug, 'uncategorized') && !strstr($cat->slug, 'marche')) {
-                echo '<li rel="'.$category_meta_color.'"><a href="';
+                echo '<li rel="'.$category_meta_color.'" id="'.$idName.'"><a href="';
                 echo get_category_link($cat->cat_ID);
                 echo '" rel="bookmark" title="Permanent Link to ';
                 echo $cat->cat_name;
                 echo '">';
                 echo '<img width="35" src="' . get_stylesheet_directory_uri() . '/images/business/category/' . $cat->slug . '.png" />';
-                echo '<span class="description"><span class="title">';
+                echo '<span class="description"><span class="title" rel="'.$category_meta_color.'">';
                 echo $cat->cat_name;
                 echo '</span><span class="meta-information">';
                 echo $cat->count . ' ' . __('Businesses');
                 echo '</span></span>';
-                echo '</a></li>';
+                echo '</a></li><style> ul.elements li#'.$idName.':hover span.title { color:'.$category_meta_color.'; } </style>';
             }
         }
         echo '</ul></div>';
@@ -224,10 +225,11 @@ class Business_Activities extends WP_Widget {
         foreach($activities as $act) {
 			//print_r($act);
 			//echo "rajesh";
+      $idName = 'activity-'.$act->term_id;
 			$color_name = "legend_icons_".$act->term_id."_color";
 			$legend_icons_color = get_option( "$color_name");
 			//echo $legend_icons_color;
-            echo '<li rel="'.$legend_icons_color.'"><a href="';
+            echo '<li rel="'.$legend_icons_color.'" id="'.$idName.'"><a href="';
             echo get_term_link($act);
             echo '" rel="bookmark" title="Permanent Link to ';
             echo $act->name;
@@ -238,7 +240,7 @@ class Business_Activities extends WP_Widget {
             echo '</span><span class="meta-information">';
             echo $act->count . ' ' . __('Businesses');
             echo '</span></span>';
-            echo '</a></li>';
+            echo '</a></li><style> ul.elements li#'.$idName.':hover span.title { color:'.$legend_icons_color.'; } </style>';
         }
         echo '</ul></div>';
 

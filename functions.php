@@ -505,7 +505,7 @@ function get_current_language_code() {
     global $languages;
     if(!$languages)
         $languages = icl_get_languages('skip_missing=N&orderby=KEY&order=DIR');
-
+    
     foreach($languages as $lang) {
         if($lang['active']) {
             $page_language = $lang;
