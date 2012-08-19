@@ -522,7 +522,7 @@ function link_to_other_language() {
     foreach($languages as $lang) {
         if(!$lang['active']) {
             $page_language = $lang;
-            return '<a class="language" href="' . $lang['url'] . '">' . $lang['language_code'] . '</a>';
+            return '<a class="language" href="' . $lang['url'] . '"><span class="accron">' . $lang['language_code'] . '</span></a>';
         }
     }
 

@@ -162,9 +162,9 @@ h1, h2, h3, h4, h5, #navigation a, #featured-slider a, #sidebar ul.pages li a sp
 
 
 
-    font-family: Arial, Helvetica, sans-serif; font-style: normal; }
+    font-family: Arial, Helvetica, sans-serif; font-style: normal;  }
 
-
+#navigation a.language span.accron { position:relative; top: 4px; left: 2px; }
 
 
 
@@ -258,7 +258,7 @@ input[type="text"].dark-background { color: #888; }
 
 
 
-#navigation a.language { color:#b10606; text-transform: uppercase; font-size:25px; font-family: 'Anton', Helvetica, sans-serif;   }
+#navigation a.language { color:#b10606; text-transform: uppercase; font-size:22px; font-family: 'Anton', Helvetica, sans-serif;   }
 
 
 
@@ -306,11 +306,11 @@ ul.elements .title { color: black; font-size: 0.9em;}
 
 
 
-#featured-slider .description h2 { margin:5px 0 15px 0; line-height:32px;}
+#featured-slider .description h2 { margin:5px 0 15px 0; line-height:32px; }
 
 
 
-#featured-slider .description h2 a {  color:#FFF; font-size: 30px; font-weight:normal;}
+#featured-slider .description h2 a {  color:#FFF; font-size: 30px; font-weight:normal; text-transform: uppercase; }
 
 
 
@@ -706,7 +706,7 @@ aside.widget_ns_mailchimp
 
 
 
-#sidebar .search input[type="submit"], #locate_btn { padding:0; vertical-align: middle; margin:0px 0px 0px -10px; background: transparent url('images/search.png') no-repeat center center; border: 0px solid white; width:34px; height:33px;  }
+#sidebar .search input[type="submit"], #locate_btn { padding:0; vertical-align: middle; margin:5px 0px 0px -10px; background: transparent url('images/search.png') no-repeat center center; border: 0px solid white; width:34px; height:33px;  }
 
 
 
@@ -1152,23 +1152,7 @@ ul#listing li.business-summary ul.coordinates { float:left; padding:0 0 0 0px; m
 
 
 
-ul#listing li.business-summary ul.coordinates li { padding:3px 0 4px 30px; }
-
-
-
-ul#listing li.business-summary ul.coordinates li.telephone { background: transparent url('images/phone.png') no-repeat center left; }
-
-
-
-ul#listing li.business-summary ul.coordinates li.address {   background: transparent url('images/address.png') no-repeat center left;}
-
-
-
-ul#listing li.business-summary ul.coordinates li.email {     background: transparent url('images/email.png') no-repeat center left;}
-
-
-
-ul#listing li.business-summary ul.coordinates li.website {   background: transparent url('images/url.png') no-repeat center left;}
+ul#listing li.business-summary ul.coordinates li { padding:3px 0 4px 3px; }
 
 
 
@@ -1477,7 +1461,7 @@ a.ad_space_250 { display:block; width:250px; height:250px;  margin:25px; }
 
 
 
-div.directory #listing li.business-summary h2 { position:absolute; top:-65px; padding: 6px 0 0 0px; margin: 0px; /*background: transparent url('images/directory-banner.png') no-repeat top left;*/ width:545px; height:65px; }
+div.directory #listing li.business-summary h2 { position:absolute; top:-65px; padding: 6px 0 0 0px; margin: 0px; text-transform: uppercase; width:545px; height:65px; }
 
 div.directory #listing li.business-summary h2 span.count
 
@@ -1717,11 +1701,11 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-#entreprise-map-area ul.social-icons { float:right; }
+#entreprise-map-area ul.social-icons { float:right; margin-right: 15px; }
 
 
 
-#entreprise-map-area ul.social-icons li { margin:20px 10px 0 10px;  }
+#entreprise-map-area ul.social-icons li { margin:20px 10px 0 5px;  }
 
 
 
@@ -1795,7 +1779,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
     font-size:14px;
 
-
+    text-transform: uppercase;
 
 }
 
@@ -2698,7 +2682,7 @@ div.wp_geo_map
 
 }
 
-#content #listing ul.coordinates li
+#content #listing ul.coordinates li, #content #listing ul.coordinates li a
 
 {
 

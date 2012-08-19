@@ -50,18 +50,7 @@
         <input id="my_location" type="text" class="initial dark-background" value="<?php echo __('Enter Your Location'); ?>" />
         <input id="locate_btn" type="button" value="" />
         
-
-        <ul class="social-icons">
-            <li><a class="addthis_button_facebook" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_twitter" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_digg" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_reddit" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_delicious" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_stumbleupon" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_linkedin" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_googlebuzz" <?php echo $to_share; ?>></a></li>
-            <li><a class="addthis_button_google_plusone" <?php echo $to_share; ?>></a></li>
-        </ul>
+        <?php get_template_part( 'social-directory' ); ?>
     </div>
     <div class="footer-bar-transparency"></div>
 

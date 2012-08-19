@@ -14,7 +14,7 @@
   <li class="business-summary">
   <?php $businessOrder = business_order($post_ID = $post->ID,$post_type = 'business');?>
 
-      <h2><span class="count" style="background-color:<?php print $color_values; ?>"><?php echo $businessOrder; ?></span><a href="<?php echo return_business_permalink($post->ID); ?>" style="color:<?php print $color_values; ?>"><?php the_title(); ?></a></h2>
+      <h2><a href="<?php echo return_business_permalink($post->ID); ?>" style="color:<?php print $color_values; ?>"><?php the_title(); ?></a></h2>
 
       <hr class="count" style="background-color:<?php print $color_values; ?>" />
 
@@ -72,8 +72,6 @@
 
                 $address = get_post_meta($post->ID, '_business_address', true);
 
-                $email = get_post_meta($post->ID, '_business_email', true);
-
                 $website = get_post_meta($post->ID, '_business_website', true);
 
             ?>
@@ -81,8 +79,6 @@
             <?php if($phone) { ?><li class="telephone"><?php echo $phone; ?></li><?php } ?>
 
             <?php if($address) { ?><li class="address"><?php echo $address; ?></li><?php } ?>
-
-            <?php if($email) { ?><li class="email"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li><?php } ?>
 
             <?php if($website) { ?><li class="website"><a href="<?php echo format_website($website); ?>"><?php echo $website; ?></a></li><?php } ?>
 
