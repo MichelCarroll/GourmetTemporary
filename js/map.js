@@ -104,15 +104,15 @@ function initialize_icons() {
 
 }
 
-function initialize_icon(marker_name, icon_name, is_wide) {
+function initialize_icon(marker_name, icon_name, is_skinny) {
 
     custom_markers[marker_name] = new google.maps.MarkerImage(theme_dir+"/images/business/map/"+icon_name+".png",
         // This marker is 20 pixels wide by 32 pixels tall.
-        new google.maps.Size((is_wide?33:28), 43),
+        new google.maps.Size((is_skinny?33:44), 43),
         // The origin for this image is 0,0.
         new google.maps.Point(0,0),
         // The anchor for this image is the base of the flagpole at 0,32.
-        new google.maps.Point(13, 43));
+        new google.maps.Point(22, 43));
 
 }
 
@@ -199,8 +199,8 @@ function register_popups(marker, business_id) {
 
             var position =  convertPoint(this.getPosition());
 
-            summary.css('left', position.x - 28);
-            summary.css('top', position.y - 230);
+            summary.css('left', position.x - 36);
+            summary.css('top', position.y - 234);
             summary.fadeIn(200);
         }
 

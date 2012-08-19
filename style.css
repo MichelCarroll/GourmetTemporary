@@ -414,10 +414,6 @@ ul.coordinates li a, ul#listing ul.coordinates li  { color:#555; text-transform:
 
 
 
-ul.coordinates li.telephone { font-weight: bold; font-size: 0.75em; }
-
-
-
 ul.coordinates li a:hover { text-decoration: underline; }
 
 
@@ -1868,7 +1864,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 .map-business-summary, .map-business-popup { z-index: 2000; }
 
 
-
+.map-business-summary .coordinates li { font-size: 20px; }
 
 
 
@@ -1877,19 +1873,12 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-    background-color:#fbfbfb;
-
-
 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefcfd', endColorstr='#dedede'); /* for IE */
 
 
 
-    background: -webkit-gradient(linear, left top, left bottom, from(#fefcfd), to(#dedede)); /* for webkit browsers */
-
-
-
-    background: -moz-linear-gradient(top,  #fefcfd,  #dedede); /* for firefox 3.6+ */
+    background: white;
 
 
 
@@ -1925,11 +1914,9 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.summary-container.themed { background-color: transparent !important; overflow:hidden; width:288px; height:158px; margin: 4px; border-width: 2px;
+.summary-container.themed { background-color: transparent !important; overflow:hidden; width:288px; height:158px; margin: 4px; 
 
 
-
-    border-style: solid;
 
 
 
@@ -1949,7 +1936,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.summary-container h2 { margin:0; padding:3px 0 3px 50px; font-size:17px; }
+.summary-container h2 { margin:0; padding:3px 0 3px 69px; font-size:17px; text-transform: uppercase; }
 
 
 
