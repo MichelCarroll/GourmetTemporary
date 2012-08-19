@@ -1,25 +1,24 @@
+<?php 
+	$catDet = get_the_category($business->id);
+	$color_values = "#8ec75e";
+	$mainCatSlug = get_business_main_category($business->id);
+	if(!empty($mainCatSlug))
+	{
+		$mainCat = get_category_by_slug( $mainCatSlug );
+		$mainCatTermId = $mainCat->term_id;
+		$color_name = "category_".$mainCatTermId."_color";
+		$color_values = get_option( "$color_name");
+	}
+?>
+
 <div id="business-popup-<?php echo $business->id; ?>" class="map-business-popup cat-<?php echo get_business_main_category($business->id); ?>">
 
     <div class="title-banner">
-
-        <ul class="categories">
-            <?php foreach($business->categories as $cat) { $slug = get_cat_slug($cat); ?>
-            <li><img width="55" src="<?php echo get_stylesheet_directory_uri(); ?>/images/business/category/<?php echo $slug; ?>.png"></li>
-            <?php } ?>
-        </ul>
-        <?php echo '<h2>' . $business->post_title . '</h2>'; ?>
+        <?php echo '<h2 style="color:'.$color_values.'">' . $business->post_title . '</h2>'; ?>
     </div>
 
     <div class="content-container">
         <?php echo $business->content; ?>
-
-        <p>
-        <?php if($business->website) { ?><strong><?php echo _e('Website: '); ?></strong><a href="<?php
-            echo format_website($business->website); ?>" class="website"><?php echo $business->website; ?></a><br /><?php } ?>
-
-        <?php if($business->email) { ?><strong><?php echo _e('Email: '); ?></strong><a href="<?php
-            echo 'mailto:'. $business->email; ?>" class="email"><?php echo $business->email; ?></a><?php } ?>
-        </p>
 
         <p><em><?php echo $business->hours; ?></em></p>
     </div>
@@ -37,8 +36,10 @@
     <div class="foot-banner">
 
         <ul class="coordinates">
-            <?php if($business->phone) { ?><li class="telephone"><?php echo $business->phone; ?></li><?php } ?>
-            <?php if($business->address) { ?><li class="address"><?php echo $business->address; ?></li><?php } ?>
+            <?php if($business->phone) { ?><li class="telephone" style="color:<?php echo $color_values; ?>"><?php echo $business->phone; ?></li><?php } ?>
+            <?php if($business->address) { ?><li class="address" style="color:<?php echo $color_values; ?>"><?php echo $business->address; ?></li><?php } ?>
+            <?php if($business->email) { ?><li class="email"><a  style="color:<?php echo $color_values; ?>" href="<?php echo 'mailto:'. $business->email; ?>"><?php echo $business->email; ?></a></li><?php } ?>
+            <?php if($business->website) { ?><li class="website"><a style="color:<?php echo $color_values; ?>" href="<?php echo format_website($business->website); ?>"><?php echo $business->website; ?></a></li><?php } ?>
         </ul>
 
        <div  class="activites" >

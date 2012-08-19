@@ -406,11 +406,7 @@ ul.coordinates li { font-size: 0.6em; }
 
 
 
-ul.coordinates li a, ul#listing ul.coordinates li  { color:#555; text-transform: uppercase; }
-
-
-
-#content ul#listing .business-summary ul.coordinates li a, #content ul#listing .business-summary ul.coordinates li { text-transform:lowercase; font-size:14px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+#content ul#listing .business-summary ul.coordinates li a, #content ul#listing .business-summary ul.coordinates li { font-size:14px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
 
 
 
@@ -1151,6 +1147,7 @@ ul#listing li.business-summary ul.coordinates { float:left; padding:0 0 0 0px; m
 ul#listing li.business-summary ul.coordinates li { padding:3px 0 4px 3px; }
 
 
+.map-business-popup ul.coordinates li { font-size: 14px; }
 
 .business-summary div.activites {  width:210px; }
 
@@ -1956,23 +1953,11 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.map-business-popup {  display: none;  position:absolute;   width:600px;  height:370px;
+.map-business-popup {  display: none;  position:absolute;   width:600px;  height:420px;
 
 
 
-    background-color:#fbfbfb;
-
-
-
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefcfd', endColorstr='#dedede'); /* for IE */
-
-
-
-    background: -webkit-gradient(linear, left top, left bottom, from(#fefcfd), to(#dedede)); /* for webkit browsers */
-
-
-
-    background: -moz-linear-gradient(top,  #fefcfd,  #dedede); /* for firefox 3.6+ */
+    background-color:white;
 
 
 
@@ -1996,15 +1981,15 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.map-business-popup .title-banner { z-index:1050; width:591px; height:78px; background:  transparent url('images/map-top-banner.png') no-repeat center center; position:absolute; top:15px; left:0px; }
+.map-business-popup .title-banner { z-index:1050; width:591px; height:78px; position:absolute; top:15px; left:0px; }
 
 
 
-.map-business-popup .title-banner h2 { float:left; margin: 7px 0 0 7px; }
+.map-business-popup .title-banner h2 { float:left; margin: 0px 0 0 20px; text-transform: uppercase; font-size: 30px; }
 
 
 
-.map-business-popup .foot-banner { z-index:1100; width:590px; height:56px; background:  transparent url('images/map-blue-banner.png') no-repeat center center; position:absolute; bottom:5px; right:0px; }
+.map-business-popup .foot-banner { z-index:1100; width:590px; height:100px; position:absolute; bottom:5px; right:0px; }
 
 
 
@@ -2016,15 +2001,11 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.map-business-popup ul.coordinates { margin:12px 0 0 50px; padding:0; list-style-type: none;  }
+.map-business-popup ul.coordinates { margin:12px 0 0 12px; padding:0; list-style-type: none;  }
 
 
 
 .map-business-popup .activites { background: none; position: absolute; right: 5px; top: -3px; float:none; }
-
-
-
-.map-business-popup .activites li img { border:1px solid #EEE; }
 
 
 
