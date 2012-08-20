@@ -20,7 +20,6 @@ get_header();
         <div id="content" class="directory">
         <?php
 
-        $query_string = handle_category_exclude($query_string);
         query_posts($query_string);
         $post_count = gourmet_post_count();
 
