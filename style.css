@@ -434,7 +434,6 @@ a.par-produits { font-size: 1.5em;  }
 
 
 
-#pagination ul li a { color:#585858;  font-size: 0.8em; font-weight: bold;  }
 
 
 
@@ -1173,7 +1172,7 @@ div.activites ul li .tooltip {margin-bottom:18px;}
 
 
 
-ul#listing li.business-summary a.locate { float:left; font-size:0.65em; text-transform: uppercase; padding:5px 0 5px 20px; margin: 8px 0 0 20px; background: transparent url('images/locate.png') no-repeat center left; }
+ul#listing li.business-summary a.locate { float:left; font-size:0.85em; text-transform: uppercase; padding:5px 0 5px 20px; margin: 8px 0 0 30px; background: transparent url('images/locate.png') no-repeat center left; }
 
 
 
@@ -1219,190 +1218,74 @@ a.ad_space_250 { display:block; width:250px; height:250px;  margin:25px; }
 
 
 
-
-
-
-
-
-
 #pagination { margin: 0 auto; display: table; }
-
-
-
 #pagination ul { list-style-type: none; display: table-row; white-space: nowrap; }
-
-
-
-#pagination ul li { display:block; float:left; border:1px solid #545454; width:22px; height: 22px; text-align: center;margin:2px; }
-
-
-
+#pagination ul li { display:block; float:left; border:1px solid #AAA; width:22px; height: 22px; text-align: center;margin:2px; }
 #pagination ul li a { display: block; height:100%; width:100%; vertical-align: bottom; position:relative; top:4px; }
-
-
-
 #pagination ul li.prev, #pagination ul li.next { display:block; float:left; padding: 0 5px; width:auto; height: 22px; text-align: center; }
-
-
-
 #pagination ul li.empty { border:0px solid white; color:#555; }
-
-
-
 #pagination ul li.empty:before { content:"...";}
 
-
-
-
-
-
-
 #pagination ul li.prev { -moz-user-select: none;  display: inline-block;  position: relative;  border-left: medium none !important;  margin-left: 26px; padding-left: 0;}
-
-
-
 #pagination ul li.prev:hover:after { border: solid 1px rgb(1,129,198); }
-
-
-
-#pagination ul li.prev:after { border: solid 1px #545454; bottom: 0px; content: ''; display: block; position: absolute; top: 2px; width: 1.4em; z-index: -1; left: -11px; background:#bebebe;
-
-
-
-
-
-
+#pagination ul li.prev:after { border: solid 1px #AAA; bottom: 0px; content: ''; display: block; position: absolute; top: 2px; width: 1.4em; z-index: -1; left: -9px;
 
   /* Gecko */
-
-
-
   -moz-transform: rotate(45deg);
-
-
-
   -moz-border-radius-topleft: 7px;
-
-
-
   -moz-border-radius-bottomright: 12px;
-
-
-
   /* webkit */
-
-
-
   -webkit-transform: rotate(45deg);
-
-
-
-  -webkit-border-top-left-radius: 7px;
-
-
-
-  -webkit-border-bottom-right-radius: 12px;
-
-
-
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 6px;
 }
-
-
-
-
-
-
 
 #pagination ul li.next { -moz-user-select: none;  display: inline-block;  position: relative;  border-right: medium none !important;  margin-right: 26px; padding-right: 0;}
-
-
-
 #pagination ul li.next:hover:after { border: solid 1px rgb(1,129,198); }
-
-
-
-#pagination ul li.next:after { border: solid 1px #545454; bottom: 0px; content: ''; display: block; position: absolute; top: 2px; width: 1.1em; z-index: -1; right: -10px; background:#BEBEBE;
-
-
-
-
-
-
+#pagination ul li.next:after { border: solid 1px #AAA; bottom: 0px; content: ''; display: block; position: absolute; top: 2px; width: 1.1em; z-index: -1; right: -7px;
 
   /* Gecko */
-
-
-
   -moz-transform: rotate(45deg);
-
-
-
-  -moz-border-radius-topleft: 4px;
-
-
-
-  -moz-border-radius-bottomright: 8px;
-
-
-
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-bottomright: 6px;
   /* webkit */
-
-
-
   -webkit-transform: rotate(45deg);
-
-
-
-  -webkit-border-top-left-radius: 4px;
-
-
-
-  -webkit-border-bottom-right-radius: 8px;
-
-
-
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 6px;
 }
-
-
-
-
-
-
-
-
-
 
 
 #pagination ul li.page {
+    background-image: linear-gradient(bottom, rgb(245,245,245) 39%, rgb(255,255,255) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(245,245,245) 39%, rgb(255,255,255) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(245,245,245) 39%, rgb(255,255,255) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(245,245,245) 39%, rgb(255,255,255) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(245,245,245) 39%, rgb(255,255,255) 78%);
 
-
-	background-color:#bebebe;
-
-    }
-
-
-
-
-
-
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.39, rgb(245,245,245)),
+            color-stop(0.78, rgb(255,255,255))
+); }
 
 #pagination ul li.page:hover { border:1px solid rgb(1,129,198); }
-
-
-
 #pagination ul li.page.active a { color: white;}
-
-
-
 #pagination ul li.page.active {
+    background-image: linear-gradient(bottom, rgb(1,129,198) 43%, rgb(55,155,213) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(1,129,198) 43%, rgb(55,155,213) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(1,129,198) 43%, rgb(55,155,213) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(1,129,198) 43%, rgb(55,155,213) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(1,129,198) 43%, rgb(55,155,213) 78%);
 
-
-
-    background:#545454;
-
-
-
-    }
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.43, rgb(1,129,198)),
+            color-stop(0.78, rgb(55,155,213))
+); }
 
 
 
@@ -1855,7 +1738,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-
+.map-link { text-transform: uppercase; }
 
 
 .map-business-summary, .map-business-popup { z-index: 2000; }
@@ -1863,6 +1746,8 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 .map-business-summary .coordinates li { font-size: 20px; }
 
+.coordinates .website a { text-decoration: underline; }
+.coordinates .website a:hover { text-decoration: none; }
 
 
 
@@ -2173,7 +2058,7 @@ margin: 0 auto;
 
 
 
-width: 800px;
+width: 940px;
 
 
 
@@ -2217,11 +2102,8 @@ float: left;
 
 
 
-width: 250px;
+width: 280px;
 
-
-
-margin-left:-65px;
 
 
 
@@ -2245,11 +2127,10 @@ float: left;
 
 
 
-width: 250px;
+width: 280px;
 
 
 
-margin-right:5px;
 
 
 
@@ -2257,7 +2138,7 @@ text-align: left;
 
 
 
-padding-left: 25px;
+padding-left: 40px;
 
 
 
@@ -2277,7 +2158,7 @@ float: left;
 
 
 
-width: 250px;
+width: 280px;
 
 
 
@@ -2285,7 +2166,7 @@ text-align: left;
 
 
 
-padding-left: 25px;
+padding-left: 40px;
 
 
 

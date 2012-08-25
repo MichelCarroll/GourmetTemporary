@@ -1328,11 +1328,11 @@ function maplink_func($atts) {
      $result .= '<img src="'.get_stylesheet_directory_uri().'/images/map-image-'.get_current_language_code().'.png" />';
 	 if(get_current_language_code() == "en")
 	 {
-     	$result .= '<span class="description" style="margin:20px 8px 8px;">Business Map</span>';
+     	$result .= '<span class="map-link description" style="margin:20px 8px 8px;">Business Map</span>';
 	 }
 	 else
 	 {
-		 $result .= '<span class="description">Voir la <br />carte interactive</span>';
+		 $result .= '<span class="map-link description">Voir la <br />carte interactive</span>';
 	 }
      $result .= '</a></div>';
      $result .= '</div>';
