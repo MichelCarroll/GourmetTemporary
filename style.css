@@ -1746,12 +1746,12 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 .map-business-summary .coordinates li { font-size: 20px; }
 
-.coordinates .website a { text-decoration: underline; }
-.coordinates .website a:hover { text-decoration: none; }
+.coordinates .website a, .coordinates .email a { text-decoration: underline; }
+.coordinates .website a:hover, .coordinates .email a:hover { text-decoration: none; }
 
 
 
-.map-business-summary {   display: none;   position:absolute;   width:300px;  height:170px;
+.map-business-summary {   display: none;   position:absolute;   width:400px;  height:170px;
 
 
 
@@ -1796,7 +1796,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.summary-container.themed { background-color: transparent !important; overflow:hidden; width:288px; height:158px; margin: 4px; 
+.summary-container.themed { background-color: transparent !important; overflow:hidden; width:350px; height:158px; margin: 4px; 
 
 
 
@@ -1814,7 +1814,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.map-business-summary div.activites {  background: transparent; height: 50px; position: absolute; bottom: -10px; right:10px; }
+.map-business-summary div.activites {  background: transparent; height: 50px; position: absolute; bottom: -10px; left:55px; }
 
 
 
@@ -1822,11 +1822,13 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.summary-container ul.coordinates {  float:left; padding:0 0 0 0px; margin: 10px 0 0 10px; list-style-type: none; }
+.summary-container ul.coordinates {  float:left; padding:0 0 0 0px; margin: 5px 0 0 10px; list-style-type: none; clear:left;  }
 
 
 
-.summary-container ul.coordinates li { padding:1px 0 1px 60px; }
+.summary-container ul.coordinates li { padding:0px 0 1px 60px; font-size: 16px; }
+
+.summary-container ul.coordinates li.website { text-decoration: underline; }
 
 
 
@@ -1870,7 +1872,10 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.map-business-popup .title-banner h2 { float:left; margin: 0px 0 0 20px; text-transform: uppercase; font-size: 30px; }
+.map-business-popup .title-banner h2,
+.map-business-summary h2 { float:left; margin: 0px 0 0 20px; text-transform: uppercase; font-size: 30px; }
+
+.map-business-summary h2 { margin: 0px 0 0 0px; font-size:20px; }
 
 
 
@@ -1886,7 +1891,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.map-business-popup ul.coordinates { margin:12px 0 0 12px; padding:0; list-style-type: none;  }
+.map-business-popup ul.coordinates { margin:12px 0 0 12px; padding:0; list-style-type: none; font-weight: bold;  }
 
 
 

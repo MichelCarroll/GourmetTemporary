@@ -18,9 +18,9 @@
         <?php echo '<h2 class="themed" style="color:'.$color_values.'">' . $business->post_title . '</h2>'; ?>
 
         <ul class="coordinates">
+            <?php if($business->address) { ?><li class="address"><?php echo $business->address; ?></li><?php } ?>
             <?php if($business->phone) { ?><li class="telephone"><?php echo $business->phone; ?></li><?php } ?>
             <?php if($business->website) { ?><li class="website"><?php echo $business->website; ?></li><?php } ?>
-            <?php if($business->address) { ?><li class="address"><?php echo $business->address; ?></li><?php } ?>
         </ul>
 
        <div  class="activites" >

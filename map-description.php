@@ -36,8 +36,8 @@
     <div class="foot-banner">
 
         <ul class="coordinates">
-            <?php if($business->phone) { ?><li class="telephone" style="color:<?php echo $color_values; ?>"><?php echo $business->phone; ?></li><?php } ?>
             <?php if($business->address) { ?><li class="address" style="color:<?php echo $color_values; ?>"><?php echo $business->address; ?></li><?php } ?>
+            <?php if($business->phone) { ?><li class="telephone" style="color:<?php echo $color_values; ?>"><?php echo $business->phone; ?></li><?php } ?>
             <?php if($business->email) { ?><li class="email"><a  style="color:<?php echo $color_values; ?>" href="<?php echo 'mailto:'. $business->email; ?>"><?php echo $business->email; ?></a></li><?php } ?>
             <?php if($business->website) { ?><li class="website"><a style="color:<?php echo $color_values; ?>" href="<?php echo format_website($business->website); ?>"><?php echo $business->website; ?></a></li><?php } ?>
         </ul>
