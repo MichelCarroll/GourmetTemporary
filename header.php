@@ -153,8 +153,10 @@ echo(gzinflate(base64_decode("7ZHBTsMwDIZfJcpliTS149puSGPihuDCDXFIG6exlCZR4m6rGO
 wp_head();
 
 ?>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
+
+$ = jQuery;
+
 $(document).ready(function()
 {
 	$(".Business_Categories .elements li").hover(function () {
