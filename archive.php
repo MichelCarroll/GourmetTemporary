@@ -47,7 +47,7 @@ get_header();
             </ul></div></div>
               <span class="sort-message"><?php _e('Sort the '); ?><br><?php _e('results'); ?></span>
               <div class="sort-controls">
-                  <a href="#" class="par-produits"><?php _e('Catégories'); ?><span class="tooltip center silver"><?php _e('Filter the results by category'); ?></span></a>
+                  <a href="#" class="par-produits"><?php _e('Categories'); ?><span class="tooltip center silver"><?php _e('Filter the results by category'); ?></span></a>
                   <a href="?sort=alpha" class="par-alpha"><span class="tooltip center silver"><?php _e('Sort the results in alphabetical order'); ?></span></a>
                   <a href="?sort=date" class="par-date"><span class="tooltip center silver"><?php _e('Sort the results in publication order'); ?></span></a>
               </div>

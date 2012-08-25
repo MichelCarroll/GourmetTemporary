@@ -32,7 +32,7 @@ class Recent_Businesses extends WP_Widget {
 
         /* Title of widget (before and after defined by themes). */
         if ( $title )
-                echo $before_title . $title . $after_title;
+                echo $before_title . __($title) . $after_title;
 
         $args = array( 'post_type' => 'business', 'posts_per_page' => $num );
         $loop = new WP_Query( $args );
@@ -127,7 +127,7 @@ class Business_Categories extends WP_Widget {
 
         /* Title of widget (before and after defined by themes). */
         if ( $title )
-                echo $before_title . $title . $after_title;
+                echo $before_title . __($title) . $after_title;
 
         $categories = get_categories(array('hide_empty' => 0, 'exclude' => $exclude_categories ));
         echo '<div class="block"><ul class="elements">';

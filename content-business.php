@@ -100,7 +100,7 @@
 
             </ul>
 
-            <a class="locate" href="<?php echo return_business_permalink($post->ID); ?>"><?php _e('Localiser sur la carte'); ?></a>
+            <a class="locate" href="<?php echo return_business_permalink($post->ID); ?>"><?php _e('Find on the map'); ?></a>
 
         </div>
 

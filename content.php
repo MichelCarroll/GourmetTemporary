@@ -35,9 +35,9 @@
       <?php the_excerpt(); ?>
       <div class="clear"></div>
       <hr class="dotted" style="background:<?php echo $color_values; ?>">
-      <div class="meta-information"><?php echo __('Mots clés'); ?>: <span class="keywords" style="color:<?php echo $color_values; ?>"><?php echo implode(',', get_tags($post->ID)); ?></span></div>
-      <div class="meta-information"><?php echo __('Par') . ' ' . get_the_author(); ?> &bull; <span class="brownify" style="color:<?php echo $color_values; ?>"><?php echo get_the_date(); ?></span></div>
-      <div class="more"><a href="<?php echo get_permalink($post->ID); ?>" style="color:<?php echo $color_values; ?>">» <?php echo __('lire la suite'); ?></a></div>
+      <div class="meta-information"><?php echo __('Keywords'); ?>: <span class="keywords" style="color:<?php echo $color_values; ?>"><?php echo implode(',', get_tags($post->ID)); ?></span></div>
+      <div class="meta-information"><?php echo __('By') . ' ' . get_the_author(); ?> &bull; <span class="brownify" style="color:<?php echo $color_values; ?>"><?php echo get_the_date(); ?></span></div>
+      <div class="more"><a href="<?php echo get_permalink($post->ID); ?>" style="color:<?php echo $color_values; ?>">» <?php echo __('keep reading'); ?></a></div>
       <hr class="dotted" style="background:<?php echo $color_values; ?>">
     </div>
 </li>
