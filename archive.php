@@ -16,6 +16,11 @@ get_header();
         add_filter('post_limits', 'gourmet_pagination_limits');
         add_filter('posts_orderby', 'gourmet_archive_sorting' );
 
+        echo '<div id="breadcrumb">';
+        echo '<a href="' . get_site_url() . '">' . __('Accueil') . '</a>';
+        echo ' &gt; <a href="#" class="active" >' . __('Ambassadeurs') . '</a>';
+        echo '</div>';
+        
         ?>
         <div id="content" class="directory">
         <?php

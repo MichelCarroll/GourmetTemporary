@@ -65,7 +65,7 @@ function create_business_post_type() {
                             'parent' => __( 'Parent Business' )
 
                     ),
-                    'rewrite' => array('slug' => 'entreprises'),
+                    'rewrite' => array('slug' => 'ambassadeurs'),
                     'has_archive' => true,
                     'description' => __( 'Businesses to be shown on the site listing, and on the regional map.' ),
                     'public' => true,
