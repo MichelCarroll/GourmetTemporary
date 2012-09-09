@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, #navigation a, #featured-slider a, #sidebar ul.pages li a sp
 
  a.par-produits  {
 
-
+    color: #999;
 
     font-family: Anton, serif;}
 
@@ -342,7 +342,7 @@ ul.elements .title { color: black; font-size: 0.9em;}
 
 
 
-#article ul.social li a { font-size:0.7em; color: #222;}
+#article ul.social li a { font-size:0.9em; color: #222;  font-family:Arial, Helvetica, sans-serif;}
 
 
 
@@ -398,7 +398,7 @@ ul#listing.no-margin { margin-top:0px;}
 
 
 
-.map-business-popup ul.coordinates { color: white;}
+.map-business-popup ul.coordinates { color: white;  font-family:Arial, Helvetica, sans-serif; }
 
 
 
@@ -593,7 +593,7 @@ body { margin:0 }
 
 	text-align:justify;
 
-	line-height:22px;
+	line-height:20px;
 
 }
 
@@ -1139,11 +1139,11 @@ ul#listing li.business-summary div.details {  min-height:97px; margin:10px 10px 
 
 
 
-ul#listing li.business-summary ul.coordinates { float:left; padding:0 0 0 0px; margin: 10px 0 0 10px; list-style-type: none; }
+ul#listing li.business-summary ul.coordinates { float:left; padding:0 0 0 0px; margin: 10px 0 0 10px; list-style-type: none;  font-family:Arial, Helvetica, sans-serif; }
 
 
 
-ul#listing li.business-summary ul.coordinates li { padding:3px 0 4px 3px; }
+ul.coordinates li { padding:3px 0 1px 3px; }
 
 
 .map-business-popup ul.coordinates li { font-size: 14px; }
@@ -1172,7 +1172,7 @@ div.activites ul li .tooltip {margin-bottom:18px;}
 
 
 
-ul#listing li.business-summary a.locate { float:left; font-size:0.85em; text-transform: uppercase; padding:5px 0 5px 20px; margin: 8px 0 0 30px; background: transparent url('images/locate.png') no-repeat center left; }
+ul#listing li.business-summary a.locate { float:left; font-size:0.85em; text-transform: uppercase; padding:5px 0 5px 20px; margin: 8px 0 0 30px; background: transparent url('images/locate.png') no-repeat center left; font-family:Arial, Helvetica, sans-serif; }
 
 
 
@@ -1180,7 +1180,7 @@ ul#listing li.business-summary a.locate { float:left; font-size:0.85em; text-tra
 
 
 
-div#sorting { position: absolute; left: 5px; top: 12px; }
+div#sorting { position: absolute; left: 5px; top: 12px; font-family:Arial, Helvetica, sans-serif; }
 
 
 
@@ -1242,16 +1242,19 @@ a.ad_space_250 { display:block; width:250px; height:250px;  margin:25px; }
 
 #pagination ul li.next { -moz-user-select: none;  display: inline-block;  position: relative;  border-right: medium none !important;  margin-right: 26px; padding-right: 0;}
 #pagination ul li.next:hover:after { border: solid 1px rgb(1,129,198); }
-#pagination ul li.next:after { border: solid 1px #AAA; bottom: 0px; content: ''; display: block; position: absolute; top: 2px; width: 1.1em; z-index: -1; right: -7px;
+#pagination ul li.next:after { border: solid 1px #AAA; bottom: 0px; content: ''; display: block; position: absolute; top: 1px; width: 1.1em; z-index: -1; right: -7px;
 
   /* Gecko */
   -moz-transform: rotate(45deg);
-  -moz-border-radius-topleft: 0px;
-  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-bottomright: 8px;
   /* webkit */
   -webkit-transform: rotate(45deg);
-  -webkit-border-top-left-radius: 0px;
-  -webkit-border-bottom-right-radius: 6px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 8px;
+  
+  height: 20px;
+  width: 16px;
 }
 
 
@@ -1744,7 +1747,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 .map-business-summary, .map-business-popup { z-index: 2000; }
 
 
-.map-business-summary .coordinates li { font-size: 20px; }
+.map-business-summary .coordinates li { font-size: 20px;  font-family:Arial, Helvetica, sans-serif; }
 
 .coordinates .website a, .coordinates .email a { text-decoration: underline; }
 .coordinates .website a:hover, .coordinates .email a:hover { text-decoration: none; }
@@ -1822,7 +1825,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.summary-container ul.coordinates {  float:left; padding:0 0 0 0px; margin: 5px 0 0 10px; list-style-type: none; clear:left;  }
+.summary-container ul.coordinates {  float:left; padding:0 0 0 0px; margin: 5px 0 0 10px; list-style-type: none; clear:left;  font-family:Arial, Helvetica, sans-serif;  }
 
 
 
@@ -1891,7 +1894,7 @@ div.home hr.dotted { padding:0px; border-bottom: 0 none; border-top: 2px dotted 
 
 
 
-.map-business-popup ul.coordinates { margin:12px 0 0 12px; padding:0; list-style-type: none; font-weight: bold;  }
+.map-business-popup ul.coordinates { margin:12px 0 0 12px; padding:0; list-style-type: none; font-weight: bold;  font-family:Arial, Helvetica, sans-serif;  }
 
 
 
@@ -2544,6 +2547,7 @@ div.wp_geo_map
 
 	font-size:12px;
 
+   font-family:Arial, Helvetica, sans-serif;
 }
 
 

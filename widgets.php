@@ -218,7 +218,7 @@ class Business_Activities extends WP_Widget {
 
         /* Title of widget (before and after defined by themes). */
         if ( $title )
-                echo $before_title . $title . $after_title;
+                echo $before_title . __($title) . $after_title;
 
         $activities = get_terms('legend_icons', array('hide_empty' => 0));
         echo '<div class="block"><ul class="elements">';
