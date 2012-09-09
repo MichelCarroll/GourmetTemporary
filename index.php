@@ -16,7 +16,7 @@ get_header(); ?>
             <?php
                 $the_page=get_gourmet_blog_page();
                 echo '<div id="breadcrumb">';
-                echo '<a href="' . get_site_url() . '">Acceuil</a>';
+                echo '<a href="' . get_site_url() . '">Accueil</a>';
                 echo ' &gt; <a href="' . get_permalink($the_page->ID) . '" class="active" >' . $the_page->post_title . '</a>';
                 echo '</div>';
             ?>
